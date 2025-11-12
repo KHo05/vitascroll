@@ -5,79 +5,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VitaScroll - Scrolling Vitamins for Mindful News</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <!-- Optional for smooth animations -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <header class="hero">
+    <nav class="navbar">
+        <div class="nav-content">
+            <img src="./images/vitascroll-logo-white.png" alt="VitaScroll Logo" class="nav-logo">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#functionality">Functionality</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="section hero">
         <div class="hero-content">
-            <img src="./images/hero-logo.png" alt="VitaScroll Logo" class="logo"> <!-- Use your logo image -->
+            <img src="./images/vitascroll-logo-teal.png" alt="VitaScroll Logo" class="logo" data-parallax>
             <h1>VitaScroll</h1>
             <p class="tagline">Your Daily Dose of Scrolling Vitamins</p>
-            <p>Tired of endless doom scrolling on junk content? 95% of teens are hooked on smartphones, missing out on real news. University students skip academia for memes, professionals lag on market updates, and teens stay uninformed. VitaScroll delivers AI-powered, bite-sized, personalized news swipes in native languages – boosting focus, awareness, and wellness without the brain rot.</p>
-            <a href="#solution" class="cta-button">Discover More</a>
+            <p>VitaScroll delivers AI-powered, bite-sized, personalized news swipes in native languages – boosting focus, awareness, and wellness without the brain rot.</p>
+            <hr class="hero-divider">
+            <p class="last-hero-text">Tired of endless doom scrolling on junk content and missing out on real news?</p>
+            <a href="#problem" class="cta-button">Discover More</a>
         </div>
-        <div class="parallax-bg"></div>
-    </header>
+    </section>
 
     <section id="problem" class="section">
         <h2>The Wellness Challenge</h2>
-        <p>In fast-paced Hong Kong, doom scrolling floods users with low-value content, causing brain rot, anxiety, and declining news awareness.</p>
-        <table>
+        <p>In fast-paced Hong Kong, doom scrolling and binge-watching flood users with low-value content, causing brain rot and anxiety while reliable news consumption declines dramatically.</p>
+        <table class="stats-table">
             <thead>
-                <tr><th>Pain Point</th><th>HK/Global Stats</th><th>Mental Health Impact</th></tr>
+                <tr><th>Pain Point</th><th>HK/Global Statistics</th><th>Mental Health Impact</th></tr>
             </thead>
             <tbody>
-                <tr><td>Doom Scrolling Overload</td><td>86.6% HK users on social media 1.7 hrs/day</td><td>60%+ HK workers elevated stress</td></tr>
+                <tr><td>Doom Scrolling Overload</td><td>86.6% HK users on social media 1.7 hrs/day</td><td>60%+ HK workers elevated stress levels</td></tr>
                 <tr><td>Brain Rot & Concentration</td><td>50% doom scrollers struggle with focus</td><td>Quadruples depression risk in teens</td></tr>
-                <!-- Add more rows from PDF -->
+                <tr><td>News Awareness Gap</td><td>Only 18% willing to pay for news</td><td>Low engagement with reliable sources</td></tr>
+                <tr><td>Social Media Primary</td><td>29.5% use social as primary news source</td><td>Increased misinformation and anxiety</td></tr>
+                <tr><td>High Screen Time</td><td>96% online daily, averaging 5 hours</td><td>>2 hrs/day doubles anxiety risk</td></tr>
             </tbody>
         </table>
-        <img src="./images/wellness-challenge-slide.png" alt="Wellness Challenge Chart" class="section-img"> <!-- Export from PDF -->
     </section>
 
     <section id="solution" class="section">
         <h2>Our Solution: VitaScroll</h2>
         <p>AI-powered healthy Tinder for news: Bite-sized, personalized content in native languages with mindful swiping mechanics.</p>
+        <div class="solution-boxes">
+            <div class="box dark-blue">
+                <h3>What is it?</h3>
+                <p>An AI-powered platform delivering bite-sized, personalized news in native languages through mindful swiping mechanics, transforming doom scrolling into empowering sessions.</p>
+            </div>
+            <div class="box light-blue">
+                <h3>Key Advantages</h3>
+                <p>Reduces unhealthy doom scrolling while boosting awareness with reliable, personalized feeds and native language support for 7.1M HK users.</p>
+            </div>
+            <div class="box dark-blue">
+                <h3>Target Users</h3>
+                <p>HK young adults aged 18-35 (2.5M segment), including urban professionals and students seeking quick, positive news updates.</p>
+            </div>
+        </div>
+        <div class="how-it-works-box">
+            <h3>How It Works</h3>
+            <ul>
+                <li>AI condenses news into 50-word cards.</li>
+                <li>Genre selection for tailored content.</li>
+                <li>Swipe mechanics for intuitive navigation.</li>
+                <li>Occasional surprise coupon ads for engagement.</li>
+            </ul>
+            <div class="mockup-container">
+                <img src="./images/mockup-filter.png" alt="Dolphin News Mockup" class="mockup-img clickable">
+                <img src="./images/mockup-dolphin.png" alt="Filter Mockup" class="mockup-img clickable">
+                <img src="./images/mockup-bee.png" alt="Bee News Mockup" class="mockup-img clickable">
+            </div>
+        </div>
+    </section>
+
+    <section id="functionality" class="section">
+        <h2>Key Functionality</h2>
         <div class="feature-grid">
             <div class="feature-card" data-tilt>
-                <img src="./images/mockup-dolphin.png" alt="News Card Mockup">
-                <h3>How It Works</h3>
-                <p>AI condenses news into 50-word cards. Swipe for genres, with surprise coupon ads.</p>
+                <h3>Double-Tap for In-Depth Reading</h3>
+                <p>Double-tap a news card to expand into a detailed thread with more images, context, and full article insights.</p>
+                <img src="./images/mockup-deep3.png" alt="In-Depth Mockup" class="mockup-img clickable">
+                <img src="./images/mockup-deep2.png" alt="In-Depth Mockup 1" class="mockup-img clickable">
+                <img src="./images/mockup-deep.png" alt="In-Depth Mockup 2" class="mockup-img clickable">
             </div>
             <div class="feature-card" data-tilt>
-                <img src="./images/mockup-bee.png" alt="Bee News Mockup">
-                <h3>Key Advantages</h3>
-                <p>Reduces unhealthy scrolling, boosts awareness with reliable feeds, supports 7.1M HK users.</p>
-            </div>
-            <div class="feature-card" data-tilt>
-                <img src="./images/mockup-filter.png" alt="Filter Mockup">
-                <h3>Target Users</h3>
-                <p>HK young adults 18-35: Urban pros and students seeking quick positive updates.</p>
+                <h3>Swipe Mechanics</h3>
+                <p>Swipe right if interested (save/bookmark), left if uninterested (skip and refine feed).</p>
+                <img src="./images/right.png" alt="Swipe Right Mockup" class="mockup-img clickable">
+                <img src="./images/left.png" alt="Swipe Left Mockup" class="mockup-img clickable">
             </div>
         </div>
     </section>
 
     <section id="team" class="section">
-        <h2>Meet the Team: Spranhts</h2>
-        <p>We are the Elephant Sprayers – watering and growing our environment!</p>
+        <h2>Meet the Team: Spranhts - The Elephant Sprayers</h2>
+        <p>We are committed to watering and growing our environment through innovation.</p>
         <div class="team-grid">
-            <div class="team-member"><img src="./images/team-quinn.png" alt="Quinn"><p>Quinn Tiffany Chen<br>Year 2, Economics</p></div>
-            <div class="team-member"><img src="./images/team-cherry.png" alt="Cherry"><p>Kuntapath Charusrojthadech<br>Year 2, Biomedical Engineering</p></div>
-            <div class="team-member"><img src="./images/team-ho.png" alt="Ho"><p>Ho Zhe Shen<br>Year 3, Computer Science</p></div>
+            <div class="team-member">
+                <img src="./images/cherrypic.png" alt="Cherry" class="clickable">
+                <p>Quinn Tiffany Chen<br>Year 2, Economics<br>1155226403@link.cuhk.edu.hk</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/quinnpic.png" alt="Quinn" class="clickable">
+                <p>Kuntapath Charusrojthadech (Cherry)<br>Year 2, Biomedical Engineering<br>1155221685@link.cuhk.edu.hk</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/shenpic.png" alt="Shen" class="clickable">
+                <p>Ho Zhe Shen<br>Year 3, Computer Science<br>1155205642@link.cuhk.edu.hk</p>
+            </div>
         </div>
-        <img src="./images/team-slide.png" alt="Team Slide" class="section-img">
+        <h3>Why Jumpstarter ZPIRE?</h3>
+        <ul>
+            <li>Ecosystem: Access a high-impact network to scale our AI wellness tool.</li>
+            <li>Mentorship: Gain expert guidance to combat HK's mental health crisis.</li>
+            <li>Mission: Turn "brain rot" into mindful empowerment.</li>
+        </ul>
+        <h3>Team Dynamics</h3>
+        <ul>
+            <li>Collaboration: Weekly AI sprints via Discord/Slack; agile roles (e.g., daily stand-ups for swipe UX testing).</li>
+            <li>Unique Strengths: AI coder complements media curator's content filtering; psychologist ensures swipe mechanics reduce anxiety; business lead handles monetization – creating a balanced "swipe squad" where tech meets empathy.</li>
+        </ul>
+        <h3>Team Experience</h3>
+        <ul>
+            <li>AI & Tech: Award-winning projects in AI chatbots and hackathons.</li>
+            <li>User-Centric Design: Academic research and projects focused on social media UX.</li>
+            <li>Wellness Application: A self-developed prototype for a mental wellness app.</li>
+        </ul>
+        <p>Committed to Bridging Gaps: We actively supplement our project experience with structured self-learning (e.g., Coursera). We see ZPIRE as the critical platform to bridge our proven potential with expert mentorship.</p>
     </section>
 
     <section id="market" class="section">
         <h2>Market Opportunity</h2>
-        <p>Dual-track: Subscriptions (HKD 1.99/mo) + ads. Projections: Y1 50K users, HKD 500K revenue.</p>
-        <img src="./images/market-slide.png" alt="Market Chart" class="section-img">
+        <p>HK Digital Media/News TAM: $13.4B (CAGR 2.26% to $15B by 2029). SAM: $488.8M (Digital News $64.9M + Wellness Apps $423.9M). SOM: 20% of 2.2M young adults with $5 ARPU.</p>
+        <h3>Revenue Strategy</h3>
+        <p>Dual-track: Subscriptions (HKD 1.99/mo or 18.99/yr) + targeted UI ads (30% revenue share). Projected 70% free users, 30% subscribers.</p>
+        <table class="stats-table">
+            <thead>
+                <tr><th>Year</th><th>Users</th><th>Revenue (HKD)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Y1</td><td>50K</td><td>500K</td></tr>
+                <tr><td>Y2</td><td>200K</td><td>2.5M</td></tr>
+                <tr><td>Y3</td><td>500K</td><td>7M scale</td></tr>
+            </tbody>
+        </table>
+        <div class="market-chart">
+            <div class="bar-container">
+                <span>TAM: $13.4B</span>
+                <div class="bar" style="width: 300px;"></div>
+            </div>
+            <div class="bar-container">
+                <span>SAM: $488.8M</span>
+                <div class="bar" style="width: 150px;"></div>
+            </div>
+            <div class="bar-container">
+                <span>SOM: 20% Capture</span>
+                <div class="bar" style="width: 50px;"></div>
+            </div>
+        </div>
+        <p>Expansion: Greater Bay Area and SEA post-Y3.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <footer>
         <p>&copy; 2025 VitaScroll by Spranhts. Join the revolution!</p>
-        <a href="mailto:kuntapath.cherry@gmail.com">Contact Us</a>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
 
     <script src="script.js"></script>
 </body>
