@@ -1,5 +1,7 @@
 # chat.md
 
+To View the Website click: https://kho05.github.io/vitascroll
+
 ## AI Interaction Overview
 
 For the development of the **VitaScroll** landing page, I collaborated with **Grok**, a generative AI developed by xAI. Grok played several crucial roles during my creative process — from brainstorming layout concepts and refining front-end code to optimizing interactive elements and sourcing visual assets. Its assistance streamlined my workflow, minimizing repetitive setup tasks and giving me more space to focus on the creative and design-oriented aspects of the project. By engaging dynamically with Grok, I was able to iterate faster, experiment more freely, and ultimately craft a landing page that feels professional, cohesive, and engaging.
